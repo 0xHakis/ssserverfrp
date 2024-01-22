@@ -5,16 +5,12 @@ services:
     image: ssserverfrp
     container_name: myssserverfrp
     environment:
-      - SSSERVER_ADDR=[::]:8848
-      - SSSERVER_METHOD=aes-256-gcm
-      - SSSERVER_PASSWD="PoEPuPpoc4gJ7w"
-      - FRPC_SERVER=""
-      - FRPC_SERVER_PORT=7000
-      - FRPC_TOKEN=""
-      - FRPC_TYPE="tcp"
-      - FRPC_LOCAL="127.0.0.1"
-      - FRPC_LOCAL_PORT=8848
-      - FRPC_REMOTE_PORT=10000
+      - SSSERVER_METHOD=2022-blake3-chacha20-poly1305
+      - SSSERVER_PASSWD=yt+S5v1oBLqirPlyGD+rn+cAOnVDZnJcTT9QpbST7HU=
+      - FRPC_SERVER=
+      - FRPC_SERVER_PORT=
+      - FRPC_TOKEN=
+      - FRPC_REMOTE_PORT=10040
     ports:
       - "8848:8848/tcp"
       - "8848:8848/udp"
